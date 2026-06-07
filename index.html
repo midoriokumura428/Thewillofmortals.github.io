@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+<title>The Will of Mortal's</title>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Cinzel:wght@400;600;700&family=Crimson+Text:ital,wght@0,400;0,600;1,400;1,600&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+<!-- CURSOR -->
+<div class="cursor-ring" id="cursorRing">
+  <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" width="32" height="32">
+    <!-- Hexagono externo giratorio -->
+    <polygon id="cursorHex" points="16,2 28,9 28,23 16,30 4,23 4,9"
+      fill="none" stroke="#c8962a" stroke-width="1.2" opacity="0.85"/>
+    <!-- Rombo interior -->
+    <polygon points="16,8 22,16 16,24 10,16"
+      fill="none" stroke="#c8962a" stroke-width="0.7" opacity="0.5"/>
+  </svg>
+</div>
+<div class="cursor-dot" id="cursorDot"></div>
+
+<!-- NAV -->
+<nav>
+  <a href="#home" class="nav-logo">
+    <img src="volkarum.png" alt="Logo" style="width:44px;height:44px;object-fit:contain;flex-shrink:0;">
+    <span class="logo-text">The Will<br>of Mortal's</span>
+  </a>
+
+  <ul class="nav-links">
+    <li><a href="#home">Home</a></li>
+    <li><a href="#historias">Historias</a></li>
+    <li><a href="#galeria">Galeria</a></li>
+  </ul>
+</nav>
+
+<!-- HERO SLIDER -->
+<section class="hero" id="home">
+  <div class="slide active" id="slide-0">
+    <img src="mainkael.jpg" alt="Imagen Principal 1">
+  </div>
+  <div class="slide" id="slide-1">
+    <img src="mainlio.jpg" alt="Imagen Principal 2">
+  </div>
+  <div class="slide" id="slide-2">
+    <img src="maindei.jpg" alt="Imagen Principal 3">
+  </div>
+  <div class="slide" id="slide-3">
+    <img src="mainfaelyn.jpg" alt="Imagen Principal 4">
+  </div>
+
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <p class="hero-subtitle">Bienvenido al reino de</p>
+    <h1 class="hero-title">The Will of <span>Mortal's</span></h1>
+  </div>
+
+  <div class="slide-indicators">
+    <div class="dot active" onclick="goToSlide(0)"></div>
+    <div class="dot" onclick="goToSlide(1)"></div>
+    <div class="dot" onclick="goToSlide(2)"></div>
+    <div class="dot" onclick="goToSlide(3)"></div>
+  </div>
+</section>
+
+<!-- LORE DEL MUNDO — PERGAMINO -->
+<section id="lore">
+  <div class="section-heading">
+    <p class="section-label">Los origenes</p>
+    <h2 class="section-title">Historia del <span>Mundo</span></h2>
+  </div>
+
+  <div class="parchment-wrap">
+    <div class="parchment">
+      <div class="parchment-body">
+
+        <h3 class="parchment-title">The Will of Mortal's</h3>
+        <p class="parchment-subtitle">Transcrito por los escribas del Concilio Gris</p>
+
+        <div class="parchment-divider">
+          <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><polygon points="11,1 21,6 21,16 11,21 1,16 1,6" fill="none" stroke="#9a6e30" stroke-width="1.2"/><circle cx="11" cy="11" r="3" fill="none" stroke="#9a6e30" stroke-width="1"/><circle cx="11" cy="11" r="1" fill="#9a6e30"/></svg>
+        </div>
+
+        <div class="parchment-text">
+          <div class="parchment-excerpt">
+            <p>¿Alguna vez han oído hablar del "destino"? Me imagino que sí, a no ser que seas un bruto bárbaro que no sepa leer. Ese hilo que nos une con algún objetivo que los dioses prepararon para nosotros. Una porquería que nos dan desde nuestro nacimiento... pero ¿Qué pasaría si te dijera que hay una forma de cambiarlo o de eliminarlo? </p>
+
+            <p>En este mundo los dioses son los regentes de la humanidad, tiene templos, campeones, cultos, etc.  ¿Nosotros? Sus ovejas que arrean en el ganado, se divierten mirándonos y jugando con nuestros objetivos, incluso son capaces de alterar la misma realidad con tal de hacer lo que les place. Si eres un Dios tienes la vida resuelta en tu inmortalidad, pero si eres mortal... bueno... no importas. Seas un imponente Dragón o un Goblin gordo no interesa mucho. Siempre seremos ovejas. </p>
+          </div>
+
+          <div class="parchment-more" id="loreMore">
+            <p>La gente ya lo acepto, los reinos solo hacen lo que se les place, creyendo que eso no forma parte de su destino.</p>
+
+<p>A este paso, te estaras preguntando "¿Como es que conoces tu destino?", si eres lo suficiente curioso como muchos seres mortales. Puedes armarte de valor y cumplir tareas para los dioses y la toda poderosa Diosa Moirae te inducirá en un sueño donde veras tu vida pasar y como va a terminar. Como si de repente adquirieras el conocimiento de tu vida y cada paso es una obligación a seguir por el tiempo que estas vivo.</p>
+            <p>"¿Que pasa si lo desobedeces?" La respuesta es simple los Dioses se volverán en tu contra. Como si te ficharan el resto de tu vida como algo que hay que eliminar bajo todos los medios. No se permiten "ovejas negras" en sus rebaños... putos racistas. </p>
+            <p>"Volkarum" fueron llamados los seres que tienen el valor o suficiente estupidez para desafiar el destino impuesto por los inmortales. Se les otorga una marca profunda en la piel acompañada de un dolor remanente equivalente a tu fechoría sacrílega, como si un metal hirviendo la cosiera en tu piel a carne viva. Las marcas son irrevocables y aunque sigas tu destino otra vez, siempre seras un hereje.</p>
+           <p>Así funciona nuestro mundo. Asi es "Credentis". </p>
+
+<p>No obstante, no todo es malo... es peor.
+La magia otorga estatus, por ende los que la poseen pueden ser muy elitistas.
+Los aventureros se creen la policía de los pueblos y si no eres fuerte no te respetan.
+Los mercenarios hacen lo que sea por un par de monedas por mas atroces que sean las acciones que les piden.
+Los asesinos no tienen corazón y si crees que te perdonaran, mejor desafía a Dios es más probable que le ganes. 
+Los de distintas razas se discriminan entre si. 
+</p>
+<p>No los culpo, la mayoría ha sido por influencia de los mismos dioses. Este caos en un mundo tan hermoso y lleno de vida. Tu "destino" siempre será lo que mas importa.</p>
+<p>"Entonces ¿No hay más que hacer?" La respuesta es no. Solo acepta tu "Destino" y jódete.</p>
+<p>Aunque existe una leyenda...</p>
+<p>Una muy antigua... que solo conocía cierta casta de "Demonios". La "Casa de Ascalon".</p>
+<p>Demonios de sangre pura que desafiaban a los dioses, ya que sabían que si un mortal entraba en el reino de los dioses conocido como "Dominus" y traspasaban sus portones, se volvería un ser capaz de decidir su propio destino.</p>
+<p>O eso dice la leyenda.</p>
+<p>No obstante, no ha habido ser en el mundo que lo haya conseguido como para comprobarlo. Y tampoco se sabe dónde ésta el reino de los dioses. Los escritos fueron eliminados por los mismos dioses. Nadie desafía a un Dios, nadie sobrevive y nadie jamás cumplirá sus sueños.</p>
+<p>Entonces ¿Qué harás, estúpido?</p>
+          </div>
+        </div>
+
+        <div class="parchment-btn-row">
+          <button class="parchment-toggle" id="loreToggle" onclick="toggleLore()">Leer mas</button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DIVIDER -->
+<div class="rune-divider">
+  <svg width="30" height="30" viewBox="0 0 30 30" fill="none"><polygon points="15,2 28,9 28,21 15,28 2,21 2,9" fill="none" stroke="#7a5a18" stroke-width="1"/><circle cx="15" cy="15" r="3" fill="none" stroke="#7a5a18" stroke-width="1"/><circle cx="15" cy="15" r="1" fill="#7a5a18"/></svg>
+</div>
+
+<!-- VOLKARUM MEMBERS -->
+<section id="historias">
+  <div class="section-heading">
+    <p class="section-label">Nuestros Aventureros</p>
+    <h2 class="section-title"><span>Volkarum</span></h2>
+  </div>
+
+  <div class="members-grid" id="membersGrid">
+
+    <div class="member-card" data-member="0" onclick="openStory(0)">
+      <div class="member-portrait">
+        <img src="Kaelfoto.jpg" alt="Kaelthar Ascalon" style="width:100%;height:100%;object-fit:cover;display:block;">
+        <div class="member-portrait-overlay"></div>
+        <div class="member-info">
+          <p class="member-class">Humano/Demonio</p>
+          <h3 class="member-name">Kaelthar Ascalon</h3>
+          <p class="member-hint">Pulsa para conocer su historia</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="member-card" data-member="1" onclick="openStory(1)">
+      <div class="member-portrait">
+        <img src="Liofoto.jpg" alt="Lio TheGold" style="width:100%;height:100%;object-fit:cover;display:block;">
+        <div class="member-portrait-overlay"></div>
+        <div class="member-info">
+          <p class="member-class">Ladron</p>
+          <h3 class="member-name">Lio TheGold</h3>
+          <p class="member-hint">Pulsa para conocer su historia</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="member-card" data-member="2" onclick="openStory(2)">
+      <div class="member-portrait">
+        <img src="Deifoto.jpg" alt="Dei" style="width:100%;height:100%;object-fit:cover;display:block;">
+        <div class="member-portrait-overlay"></div>
+        <div class="member-info">
+          <p class="member-class">Dragon/Vampiro</p>
+          <h3 class="member-name">Dei</h3>
+          <p class="member-hint">Pulsa para conocer su historia</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="member-card" data-member="3" onclick="openStory(3)">
+      <div class="member-portrait">
+        <img src="Faelynfoto.jpg" alt="Faelyn Thalorein" style="width:100%;height:100%;object-fit:cover;display:block;">
+        <div class="member-portrait-overlay"></div>
+        <div class="member-info">
+          <p class="member-class">Druida</p>
+          <h3 class="member-name">Faelyn Thalorein</h3>
+          <p class="member-hint">Pulsa para conocer su historia</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- STORY PANEL -->
+  <div class="story-panel" id="storyPanel">
+    <div class="story-inner">
+      <button class="story-close" onclick="closeStory()">Cerrar</button>
+      <div class="story-header">
+        <div class="story-portrait" id="storyPortrait">
+          <!-- El retrato se actualiza dinámicamente por JS según el personaje -->
+        </div>
+        <div class="story-header-text">
+          <h3 class="story-name" id="storyName"></h3>
+          <p class="story-epithet" id="storyEpithet"></p>
+        </div>
+      </div>
+      <div class="story-text" id="storyText"></div>
+    </div>
+  </div>
+
+</section>
+
+<!-- DIVIDER -->
+<div class="rune-divider">
+  <svg width="30" height="30" viewBox="0 0 30 30" fill="none"><polygon points="15,2 28,9 28,21 15,28 2,21 2,9" fill="none" stroke="#7a5a18" stroke-width="1"/><circle cx="15" cy="15" r="3" fill="none" stroke="#7a5a18" stroke-width="1"/><circle cx="15" cy="15" r="1" fill="#7a5a18"/></svg>
+</div>
+
+<!-- GALLERY -->
+<section id="galeria">
+  <div class="section-heading">
+    <p class="section-label">Momentos inmortalizados</p>
+    <h2 class="section-title">Galeria de <span>Aventuras</span></h2>
+  </div>
+
+  <div class="gallery-grid">
+    <div class="gallery-item">
+      <img src="gale1.jpg" alt="Imagen 1" style="width:100%;height:100%;object-fit:cover;display:block;">
+      <div class="gallery-item-overlay">
+        <svg class="gallery-overlay-icon" width="32" height="32" viewBox="0 0 32 32" fill="none"><circle cx="16" cy="16" r="14" stroke="currentColor" stroke-width="1.5"/><path d="M10 16 L22 16 M16 10 L16 22" stroke="currentColor" stroke-width="1.5"/></svg>
+      </div>
+    </div>
+    <div class="gallery-item">
+      <img src="gale2.jpg" alt="Imagen 2" style="width:100%;height:100%;object-fit:cover;display:block;">
+      <div class="gallery-item-overlay">
+        <svg class="gallery-overlay-icon" width="32" height="32" viewBox="0 0 32 32" fill="none"><circle cx="16" cy="16" r="14" stroke="currentColor" stroke-width="1.5"/><path d="M10 16 L22 16 M16 10 L16 22" stroke="currentColor" stroke-width="1.5"/></svg>
+      </div>
+    </div>
+    <div class="gallery-item vertical">
+      <img src="gale3.jpg" alt="Imagen 3 vertical" style="width:100%;height:100%;object-fit:cover;display:block;">
+      <div class="gallery-item-overlay">
+        <svg class="gallery-overlay-icon" width="32" height="32" viewBox="0 0 32 32" fill="none"><circle cx="16" cy="16" r="14" stroke="currentColor" stroke-width="1.5"/><path d="M10 16 L22 16 M16 10 L16 22" stroke="currentColor" stroke-width="1.5"/></svg>
+      </div>
+    </div>
+    <div class="gallery-item vertical">
+      <img src="gale6.jpg" alt="Imagen 4 vertical" style="width:100%;height:100%;object-fit:cover;display:block;">
+      <div class="gallery-item-overlay">
+        <svg class="gallery-overlay-icon" width="32" height="32" viewBox="0 0 32 32" fill="none"><circle cx="16" cy="16" r="14" stroke="currentColor" stroke-width="1.5"/><path d="M10 16 L22 16 M16 10 L16 22" stroke="currentColor" stroke-width="1.5"/></svg>
+      </div>
+    </div>
+    <div class="gallery-item">
+      <img src="gale5.jpg" alt="Imagen 5" style="width:100%;height:100%;object-fit:cover;display:block;">
+      <div class="gallery-item-overlay">
+        <svg class="gallery-overlay-icon" width="32" height="32" viewBox="0 0 32 32" fill="none"><circle cx="16" cy="16" r="14" stroke="currentColor" stroke-width="1.5"/><path d="M10 16 L22 16 M16 10 L16 22" stroke="currentColor" stroke-width="1.5"/></svg>
+      </div>
+    </div>
+  </div>
+
+  <div class="gallery-btn-wrap">
+    <a href="#galeria" class="btn-medieval">Ver galeria completa</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="logo-text" style="font-family:'Cinzel Decorative',serif;color:#c8962a;font-size:16px;margin-bottom:1rem;">The Will of Mortal's</div>
+        <p>Un mundo donde los dioses tejen el destino de cada alma desde su nacimiento. Pocos se atreven a desafiar sus hilos, pero una antigua leyenda susurra que, más allá de los cielos, existe un camino hacia la verdadera libertad.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Navegacion</h4>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#historias">Historias</a></li>
+          <li><a href="#galeria">Galeria</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Los Volkarum</h4>
+        <ul>
+          <li><a href="#historias" onclick="openStory(0)">Kaelthar Ascalon</a></li>
+          <li><a href="#historias" onclick="openStory(1)">Lio TheGold</a></li>
+          <li><a href="#historias" onclick="openStory(2)">Dei</a></li>
+          <li><a href="#historias" onclick="openStory(3)">Faelyn Thalorein</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>The Will of Mortal's — Todos los derechos reservados</p>
+      <div class="footer-rune">
+        <div class="rune-glyph"><span>V</span></div>
+        <div class="rune-glyph"><span>K</span></div>
+        <div class="rune-glyph"><span>R</span></div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+// ---- CURSOR ----
+const ring = document.getElementById('cursorRing');
+const dot  = document.getElementById('cursorDot');
+const hex  = document.getElementById('cursorHex');
+
+let mouseX = -200, mouseY = -200;
+let ringX  = -200, ringY  = -200;
+let angle  = 0;
+let hovering = false;
+
+document.addEventListener('mousemove', e => {
+  mouseX = e.clientX;
+  mouseY = e.clientY;
+  dot.style.left = mouseX + 'px';
+  dot.style.top  = mouseY + 'px';
+});
+
+// Elementos que activan el estado hover del cursor
+const hoverTargets = 'a, button, .member-card, .gallery-item, .dot, .parchment-toggle, .read-more-btn, .story-close, .btn-medieval';
+
+document.querySelectorAll('*').forEach(el => {
+  el.addEventListener('mouseenter', () => {
+    if (el.matches(hoverTargets)) {
+      hovering = true;
+      document.body.classList.add('cursor-hover');
+    }
+  });
+  el.addEventListener('mouseleave', () => {
+    if (el.matches(hoverTargets)) {
+      hovering = false;
+      document.body.classList.remove('cursor-hover');
+    }
+  });
+});
+
+// Animacion del cursor: sigue con lag suave y el hexagono gira
+function animateCursor() {
+  // Lag suave del anillo siguiendo al raton
+  ringX += (mouseX - ringX) * 0.12;
+  ringY += (mouseY - ringY) * 0.12;
+  ring.style.left = ringX + 'px';
+  ring.style.top  = ringY + 'px';
+
+  // Rotacion continua del hexagono, mas rapida en hover
+  angle += hovering ? 2.2 : 0.6;
+  hex.setAttribute('transform', `rotate(${angle}, 16, 16)`);
+
+  requestAnimationFrame(animateCursor);
+}
+animateCursor();
+
+// Ocultar cursor al salir de la ventana
+document.addEventListener('mouseleave', () => {
+  ring.style.opacity = '0';
+  dot.style.opacity  = '0';
+});
+document.addEventListener('mouseenter', () => {
+  ring.style.opacity = '1';
+  dot.style.opacity  = '1';
+});
+
+// ---- HERO SLIDER ----
+let currentSlide = 0;
+const totalSlides = 4;
+
+function goToSlide(n) {
+  document.querySelectorAll('.slide').forEach((s,i) => s.classList.toggle('active', i === n));
+  document.querySelectorAll('.dot').forEach((d,i) => d.classList.toggle('active', i === n));
+  currentSlide = n;
+}
+setInterval(() => goToSlide((currentSlide + 1) % totalSlides), 5000);
+
+// ---- LORE TOGGLE ----
+function toggleLore() {
+  const more = document.getElementById('loreMore');
+  const btn  = document.getElementById('loreToggle');
+  const open = more.classList.toggle('visible');
+  btn.textContent = open ? 'Leer menos' : 'Leer mas';
+}
+
+// ---- STORY DATA ----
+const members = [
+  {
+    name: 'Kaelthar Ascalon',
+    epithet: '«el fin siempre justifica sus medios»',
+    portrait: 'minikael.jpg',
+    excerpt: `<p>... -Bajo el intenso sol de un amanecer tan hermoso como los diamantes mas brillantes, este hombre yace sentado en una pila de cadáveres dentro del castillo real- Otro contrato hecho... -Dijo levantándose cansado de repetir las escenas una y otra vez le llaman "Monotonía"- Corruptos... -Pisa el cuerpo del consejero del Rey degollado- Estúpidos... -Pisa a sus soldados decapitados- Escoria... -Patea el cuerpo del Rey estampándolo contra el pilar del salón del trono- ¿Cuánto tiempo piensas hacerte el muerto? -Su voz resuena en el eco del amanecer monstruosa y vigilante-</p>
+    <p>¡Per-perdóneme po-por favor! -Exclamo con dolor y un miedo tan grande que hacia sonar su voz como un alarido- ¡Le pa-pagare muchas monedas! En- -El ruido fue cortado por un sonido hueco y la cabeza del Rey fue partida por la mitad con un corte vertical limpio como una linea recta trazada en un papel en blanco-</p>`,
+    more: `<p>El hombre solo miraba como la sangre manchaba la alfombra y se retiro en silencio, pero hay quien dice que el vio al sospechoso salir del reino lo escucho decir "No necesito tu mierda de dinero". Lo llaman "La Parca". El asesino mas temido de todo el continente. A donde llega hay muerte y no se va hasta cumplir sus objetivos, dicen que desafiarlo es como desafiar a una deidad. Si algún día lo vez, solo acepta tu "Destino" y ruega porque sea rápido.</p>
+    <p>Dicen que lleva operando de hace 10 años, por aquí... por allá... donde sea que soliciten sus servicios. Pertenece al Clan de Asesinos más grande de toda la historia de este mundo "Velo Escarlata". Para pertenecer a dicho clan debes matar a un miembro de Alto Rango, lo cual no es una hazaña fácil, pero esto fomenta a que cada vez sus asesinos sean cada vez más fuerte y se adapten seguí los tiempos. "La Parca" es el asesino mas poderoso de dicho Clan, tanto es así que ya nadie lo desafía, nadie se mete con el, nadie le habla. Todo el mundo le teme.</p>
+    <p>Pasan varios días de lo acontecido, la caída de un reino... por un solo hombre. Ese hombre estaba sentado en un bosque encantado, en un páramo que nadie se atrevía a pasar. Las criaturas mágicas son de temer. Este hombre estaba mirando al cielo, intentando buscar en su "Destino" algo que le de sentido a su vida, cuando escucho los pasos de un animal. Un pequeño lobo blanco lleno de sangre, parecía una cría. Parecía asustado. No obstante, el hombre se dio cuenta que se había sentado al lado de su guarida, así que solo se aparto para que pasara. El pequeño lobo camino hacia la guarida lento, no quitando los ojos de encima de él y cuando entro, el hombre volvió a sentarse.</p>
+    <p>Día difícil ¿Eh? -Hablaba al lobo, ya que sentía su presencia a su espalda- ¿Te quedaste sin tu familia? -Espeta con una voz mas suave de lo común y sin nada de filo- Te diría que te entiendo... pero la verdad no tengo ni idea... soy huérfano. -Se escucho como un eco en el bosque sin ningún sentimiento en particular-</p>
+    <p>Su mente vaga en recuerdos... y por fin encuentra algo.</p>
+    <p>[Flashback] En el viento soplaba con fuerza en una noche de tormenta y un bebé se encontraba en una canasta de mimbre frente a un orfanato de baja calidad. La puerta se abrió y una señora no muy anciana lo acogió en sus brazos con lo que se podía interpretar como cariño. Los años pasaron, el niño crecía y se divertía con los demás, intentaba ayudar en lo que mas podía a su "abuela" que se llamaba Numiela, pero el la llamaba Numi.</p>
+    <p>Cuando por fin cumplió 15 años ocurrió una desgracia en el pueblo. Un incendio que arraso con casi todo. El adolescente vio como todos sus amigos, bebes y su figura materna se quemaban sin poder hacer nada. Atrapado en una habitación rodeado de llamas escuchaba sus gritos de sufrimiento que resonaban constantemente dentro de su mente.</p>
+    <p>Levantate... levantate... -Escuchaba una voz que provenía de alguna parte-</p>
+    <p>No quiero... ya no me queda nada... déjame morir en paz y acompañarlos... -Sus pensamientos responden por el-</p>
+    <p>¡Tu destino no es ese mortal! -El tiempo se congela y las llamas igual- Los dioses hemos preparado un destino especial para ti, aun eres de utilidad. -Explico con exigencias-</p>
+    <p>Tu y los dioses se pueden ir al demonio... -Escupes con desprecio- Dioses mi trasero...</p>
+    <p>¡Maldito hereje! -Escupe como si estuviera hablando con un trozo de porquería- ¿Y si te revelo que este incendio... fue provocado por asesinos? ¿No te gustaría vengarte chico?</p>
+    <p>Dime... ¡Dime! -Soltaba con desesperación apretando los puños, mientras se levantaba cubierto por un aura negra-</p>
+    <p>Están a las afueras del pueblo pavoneándose por un trabajo bien hecho. Llegaras si sobrevivas a la caída de tres pisos. -Le susurra al oído con malicia- Aunque debo advertirte... no esta en tu destino matarlos. Si por algún motivo lo llegaras a conseguir. Sabes lo que te pasara.</p>
+    <p>El tiempo vuelve a correr y el joven atraviesa la ventana del tercer piso envuelto en ese aura negra. Fueron ustedes... -Una voz casi espectral apareció a las espaldas de los asesinos- Los matare... a todos... lo juro.</p>
+    <p>El joven no tenia armas, no las necesitaba. Se guiaba únicamente por instinto. Era como si pudiera ver el futuro, se sentía ligero y mucho mas fuerte. En un instante despacho a cuatro asesinos de elite con manos desnudas y garras que brotaban de la nada. El último, un hechicero de fuego, lo carbonizó... pero el joven salio caminando de las llamas regenerándose.</p>
+    <p>¿Acaso me llamaste "Monstruo"? -preguntó con calma- Tus poderes son de fuego ¿No? Ahora dime... ¿Fuiste tu el que inicio el fuego?</p>
+    <p>El hombre por todo el miedo y dolor solo pudo asentir.</p>
+    <p>¿Por que? -Lo asfixiaba con una mano enterrando sus garras en el cuello-</p>
+    <p>Dis-disculpeme... por favor... No fue personal solo e-era... mi... "Destino".</p>
+    <p>... ¿Así que fue eso? -Lo sueltas- Ya veo... -Te alejas unos pasos- Me voy entonces... -Sombras como tentáculos lo agarran- ¡¿PENSASTE QUE DIRIA ESO IMBECIL DE MIERDA?! ¡¿NO FUE PERSONAL?! ¡JAJAJA! ¡UNA MIERDA! -Finalmente lo eliminas con una garra atravesando su cabeza- Se acabo... Lo siento Numi... Tu niño ya no es una buena persona... ¡¡¡AAAAAAAAAAAAAAAAAAAAHHHHHHHHH!!!</p>
+    <p>La Diosa Moirae apareció y le ofreció convertirse en su Campeon. El joven respondió con un intento de ataque que le dejó un corte en el ojo izquierdo. Ella, furiosa, pronunció la palabra "Volkarum" y una marca apareció en el pectoral izquierdo del joven quemándolo vivo. Luego, al amanecer, lo encontraron los del Clan "Velo Escarlata" y lo reclutaron: ya había pasado el examen de admisión matando a sus propios miembros de Alto Rango.</p>
+    <p>El hombre seguía sentado en la guarida del pequeño lobo blanco. Ya había pasado todo un día y cuando despertó el lobo se encontraba durmiendo en su regazo.</p>
+    <p>Ya veo... ¿Te caigo bien eh?... Estas solo. ¿Sola? -Ladra con gusto- Jaja... okey chica, perdona. -Te levantas con ella en tus brazos- Ahora somos los 2... -Sales del bosque en rumbo a la Ciudad de todas las razas "Eldoria".</p>`
+  },
+  {
+    name: 'Lio TheGold',
+    epithet: '«La conciencia pesa… por eso corro sin cargar con ella»',
+    portrait: 'minilio.jpg',
+    excerpt: `<p>¡Pfffaa! ¡Que día tan cansado! ¿No lo creen? Un chico con un peinado desordenado se encontraba sentado al lado de una fogata hecha debajo de un puente. El chico se encontraba rodeado de varios asaltantes... destacando entre todos por su peinado verdoso con un pedazo café, como si el tinte del pelo se le hubiese acabado al momento de tintarse. Junto a esto, un ojo que no era normal. Su ojo derecho era completamente rojo, reflejando la luz del fuego frente a el, como si de un espejo reflejando la luz se tratara...</p>
+    <p>Para nada... ¡Robaste todo lo que era para nosotros! ¡Idiota! Exclamo uno de los ladrones mas grandes, enfurecido.</p>
+    <p>¿ah? ¡Vamos hombre! ¡Les hice el trabajo mas fácil! Puf.. ladrones tenían que ser. Exclamo aquel chico peculiar, haciendo un leve puchero.</p>`,
+    more: `<p>¡¿Trabajo fácil?! ¡¿Nos estas jodiendo?! ¡Hiciste que un caballero atrapara a uno de los nuestros por tu estúpido capricho! Mucho antes de que el bandido terminara su frase y se lanzara a los golpes, unos pasos resuenan bajo aquel puente. Un grupo de caballeros los rodea por ambos lados. Sin pensarlo dos veces, los ladrones levantan las manos. Todos menos el chico del suelo.</p>
+    <p>G-gracias... ¡Gracias por llegar! Repentinamente, aquel chico se levanta corriendo hacia el caballero más cercano, aferrándose a él. Su apariencia había cambiado: orejas élvicas largas, pelo crecido en coleta, y el ojo extraño tapado con un parche. ¡Estaba pasando por el puente y llegaron estos hombres a secuestrarme! ¡Me quitaron todo! ¡Gracias! ¡Gracias!</p>
+    <p>¡E-eso es mentira! ¡Nosotros no robamos nada! Pero para su mala fortuna, unas 4 bolsas de monedas aparecieron en el suelo. Los ladrones acabaron en la cárcel, y el "elfo" recibió las bolsas de vuelta de manos del caballero.</p>
+    <p>Mientras más se alejaba, el ladrón grande gritaba con ira desde los barrotes. ¡¿CREES QUE PODRAS ESCAPAR?! ¡ERES UN MALDITO MONSTRUO! El joven simplemente sacó una moneda de oro de una de las bolsas. La moneda brillaba intensamente, reflejando su cara tapada bajo una capucha.</p>
+    <p>«Un... Monstruo..»</p>
+    <p>Un pequeño que se veía sucio pero con una gran alegría corría por las calles hacia una casita en un callejón. Frente a la casa, tres niños pegados a una señora bien retocada, pero con expresión triste. ¡Mamá! ¡Mira lo que conseguí! El pequeño corre mostrando la moneda de oro. La madre sonrió una sonrisa tan cálida como falsa y guardó la moneda.</p>
+    <p>La verdad sobre Mira era oscura: detestaba a sus hijos, había asesinado a su esposo adinerado y fingido un accidente para quedarse con su fortuna. En el templo de Aurum, entre alabanzas y gritos del predicador, Mira entregó a Lio como ofrenda al dios de las riquezas. El pequeño, sin entender, vio en los ojos de su madre una locura que siempre supo que estaba ahí.</p>
+    <p>El padre elevó una gema posicionándola sobre el corazón de Lio. Una fuerte luz comenzó a rodear al pequeño. Su pelo cambió de color y su iris comenzó a sangrar. Todo se nublaba... hasta que un rugido enorme lo interrumpió todo. Un dragón tapó con su ojo la ventana del templo. El caos estalló.</p>
+    <p>Poco tiempo después, Lio volvió corriendo a buscar a su madre y hermanos. Los encontró bajo los escombros. En la mano cerrada de su madre, la moneda que él le había dado. Reflejando al pequeño... pero viéndose distinto.</p>
+    <p>... He... Hehe... ¡Haha! ¡¡HAHAHA!! La risa del pequeño poco a poco se transformaba en gritos de agonía. Su hombro comenzaba a arder infernalmente. Lágrimas brotaban sin control... Sin saber si eran por el dolor o por su familia.</p>
+    <p>Al despertar, sin ningún sentimiento tomó la moneda de la mano de su madre y un collar roto de Aurum. Sus pasos resonaban pesados entre cadáveres incinerados. Al ver personas que regresaban de una caza exitosa corrió hacia ellas... solo para recibir el filo de un cuchillo como advertencia. Lo vieron diferente, maldito. Una piedra en la cabeza lo tiró al suelo. Su capucha cayó. Solo levantó su mano mirando la moneda brillante.</p>
+    <p>«..Monstruo..»</p>
+    <p>Un niño jala el pantalón de Lio adulto. ¿Tiene una moneda que me de? Necesito comida para mi hermana pequeña. El joven suspira irritado y le lanza una bolsa de dinero en la cara. A-auch... S-se lo agradezco mucho señor! E-esto es mucho!.. oh... Su nariz esta... Lio se limpia la nariz, ahora sangrando, y se va sin decir más. Usa el dinero correctamente mocoso. No lo robe fácil, dale buen uso. El niño al escuchar eso se aterró y corrió a esconderse, mientras a la distancia el joven se quitaba la capucha sacándole la lengua.</p>
+    <p>Un momento emotivo que se perdería en segundos pues Lio comenzaba a ser perseguido por caballeros que lo habían visto a la distancia. La risa de un joven que parecía divertirse y los gritos desesperados de sus perseguidores resonaron en la noche: ¡¡¡SE ROBO MI CABALLO!!!</p>`
+  },
+  {
+    name: 'Dei',
+    epithet: '"Aquella que Habla con lo que Fue"',
+    portrait: 'minidei.jpg',
+    excerpt: `<p>Cuando desperté en la posada de mala muerte en la que había dormido esa noche con el poco dinero que me quedaba, mientras miraba el techo me pregunté: ¿Qué hubiera pasado si hubiera tomado otras decisiones? ¿Qué habría sido de mi?</p>
+    <p>Por lo que escuchaba de los viejos de la aldea cuando solo era una niña, era de los errores constantes que cometía mi madre.</p>
+    <p>Al verse en un matrimonio formado por ambas familias ella decidió escapar, lo cual no salió muy bien del todo, debido a los peligros del exterior y por todas las personas maliciosas que hay en este mundo.</p>`,
+    more: `<p>Cuando ella volvió a casa mis abuelos se enteraron que ella estaba embarazada de otro, lo cual les enfadó de sobremanera. Disolvieron el matrimonio arreglado, cuidaron de mi madre y de mi cuando aún no había nacido. Pero años después de mi nacimiento todo se fue al mierda: al percatarse de que yo no tenía casi ningún rasgo de los Semi Dragones, mi madre tuvo una fuerte discusión con mis abuelos y les contó que mi padre biológico era un vampiro. Mis abuelos entraron en locura yendo de inmediato con el consejo del pueblo, y todos quedaron en que mi madre debía ser desterrada de la aldea por esta terrible traición a su legado.</p>
+    <p>Lo que tuvo como consecuencia que mi madre y yo tuviéramos que viajar constantemente para poder sobrevivir. Pero en una noche cuando salí a buscar más hierbas curativas, al volver todo estaba tan silencioso, tan en paz, lo que causó en mi una intranquilidad y me puse más en alerta. Fue cuando llegué a la cabaña y la vi… en el suelo casi moribunda. Quedé paralizada, no sabía qué hacer. Me acerqué lo más rápido que pude e intenté ayudarla, pero mi poder en ese entonces aún era inmaduro. Salí corriendo pidiendo ayuda a todos lados, pero al verme llena de su sangre me empezaron a señalar, me atacaron y no tuve más opción que huir de ese lugar, sin saber quiénes fueron los asesinos de mi madre y siendo tachada de asesina.</p>
+    <p>(Fin del recuerdo)</p>
+    <p>Talvez… si hubiera salido con ella esa noche… ella seguiría con vida… —Dije en voz baja mientras caían lentamente lágrimas.</p>`
+  },
+  {
+    name: 'Faelyn Thalorein',
+    epithet: '"La Flecha que Espera el Momento Exacto"',
+    portrait: 'minifaelyn.jpg',
+    excerpt: `<p>—Zuscord, traje tu pedido… —dijo ella mientras el eco de sus pasos se extendía por la casa ajena. Su mirada recorrió el lugar en busca del dueño mientras dejaba con cuidado un par de bolsas de papel sobre la mesa.</p>
+    <p>—Has llegado… Te estaba esperando.</p>
+    <p>La voz surgió desde un rincón oscuro. El ambiente se volvió denso y tétrico, como si el anochecer hubiera caído únicamente dentro de aquella casa. Desde las sombras, a espaldas de la joven peliverde, comenzó a emerger una figura deforme y retorcida que se inclinó hacia ella.</p>`,
+    more: `<p>—Te traje lo que pediste. Me encargaron venir porque todos los demás te tienen miedo. Quizá, si aparecieras con una forma más normal, las cosas serían distintas, Zus… —comentó con total naturalidad y una pequeña sonrisa—. Aunque me gusta visitarte. Siempre termino aprendiendo cosas nuevas contigo.</p>
+    <p>Él la observó en silencio. Poco a poco, fue adoptando su forma humana antes de responder: —Es que últimamente no han llegado visitas muy gratas. En fin, si quieres saber más, primero domina lo que ya te he enseñado.</p>
+    <p>La chica se agachó e hizo una pequeña sombra con la mano. La oscuridad tomó la forma de un pequeño conejo; diminutas luces turquesa brillaban en sus ojos y a lo largo de su cuerpo. La joven lo tomó en brazos. —Aún solo puedo invocar animales pequeños… Cuando me dijiste que lo intentara pensé que estabas bromeando. Supiste de mis poderes de druida apenas me viste, cuando nadie en Valkya lo sabe… y ahora esto… ni siquiera yo sabía que podía hacerlo.</p>
+    <p>—Se percibe a distancia el rencor, ira, tristeza... Para algunas criaturas mágicas, tu simple presencia es inquietante. Ese espíritu del bosque marchito que llevas dentro hace que parezcas un presagio de desgracias. Yo quise averiguar si podías sacarle provecho a tu "maldición"… y parece que tuve razón. Puedes traer de vuelta a animales que ya no están con nosotros de esa forma y... quizás más.</p>
+    <p>—Este poder es interesante… aunque tiene consecuencias. Estas raíces y marcas en mis manos crecen y duelen cada vez que uso de más el poder del espíritu marchito, aunque luego desaparecen, y… también está lo otro. Ya sabes… la consecuencia de revelarme a mi destino. —Palmea un lado de su pierna, vendada en ese lugar.</p>
+    <p>—¿Cómo te metiste en tantos líos? —preguntó Zuscord, sentándose y ofreciéndole el asiento del otro extremo de la mesa.</p>
+    <p>La chica se sentó. —Bueno… verás… Yo nací en una aldea pequeña dentro del bosque Elarien, cerca de Valkya. Mi padre era jefe de la aldea y mi madre cultivaba hierbas medicinales. Un día, mi padre vio cómo unos guardias perseguían a una elfa, y sin pensarlo la ayudó a escapar.</p>
+    <p>—Mi madre ya estaba embarazada de mí en ese momento. A pesar de que ambos eran conscientes del riesgo de traer a la elfa a la aldea, no dudaron. Conversando con ella, notó que su hija, que ya estaba por llegar, tenía una conexión especial con la naturaleza. Esa elfa fue mi maestra Luneth, y volvió cuando yo tenía tres años. Así pasaron diez años.</p>
+    <p>—Pero un día llegó un grupo llamado "La Guardia Umbría". Guardias de Valkya que se encargaban de los trabajos más oscuros, arrasando aldeas con cualquier excusa. Y llegaron a la nuestra.</p>
+    <p>—Ese día yo estaba entrenando con mi maestra en un río lejos de la aldea. De pronto vi el humo. Mi maestra corrió hacia la aldea y algo o alguien la arrastró a lo profundo del bosque sin dejar rastro. En medio del fuego busqué a mis padres con desesperación… y los encontré. Vi a mi madre bajo los escombros sin movimiento, y a mi padre cayendo frente a mí tras intentar defenderla.</p>
+    <p>—Escuché su "¡CORRE! ¡HUYE, FAELYN!", lleno de desesperación y miedo. Yo me quedé paralizada. Uno de ellos me vio y vino hacia mí. Mi padre se lanzó contra él dándome unos segundos más para huir. "¡FAELYN! Hija, huye… vive." Fueron sus últimas palabras, antes de que una espada atravesara su garganta. En ese momento le hice caso a mi padre. Huí.</p>
+    <p>—Le grité al bosque que los protegiera, que no era justo. Una niebla apareció y una voz pesada me habló, presentándose como las memorias del bosque: "Las vidas perdidas no puedo recuperarlas… pero puedes mantenerlas en tu memoria y evitar futuras desgracias. Seré tu fuerza para hacer el cambio." Entonces apareció la Diosa Moirae, cegadora, imponente: "Mi pequeña… yo vi tu primer aliento. No puedes interferir entre el balance de la vida y la muerte." Me dijo que sus muertes eran el curso correcto del mundo.</p>
+    <p>—La quería matar. La diosa dijo que debía obedecer mi camino, que el espíritu marchito solo me hundiría en la oscuridad. En mi mente resonó lo que el bosque me había dicho: "hacer el cambio". No seguiría un destino en el que tuviera que aceptar que la muerte de mi familia era algo insignificante. Hice el pacto. Las sombras envolvieron mi cuerpo; ramas negras crecieron sobre mi piel comenzando desde mis manos.</p>
+    <p>—La Diosa se puso furiosa y me lanzó contra un árbol. La escuchaba: "Mocosa necia… aún estás a tiempo de redimir tu camino. Ven conmigo." Poco me importó que fuera una diosa. Me levanté para atacarla, pero en su mirada vi que comprendió que ya no había marcha atrás. Solo se elevó… y se desvaneció.</p>
+    <p>—Y te volviste una volkarum —dijo en voz baja Zuscord.</p>
+    <p>—Ni sentí el dolor de la marca en ese momento. Solo quería volver a mi hogar. Pasé los siguientes días dejando la aldea en ruinas lo más "en paz" posible, hice un lugar donde todos pudieran descansar, pedí perdón a mis padres de rodillas y recé para que la Madre Tierra los recibiera. Ahora regreso cada año a dejarles flores.</p>
+    <p>La joven se levanta despacio. —¿Y por qué venir a Valkya… si los guardias de este lugar fueron los que atacaron tu aldea? —Esa será una historia para otro día, Zus. Ya es tarde. —Toma sus cosas, le sonríe y cierra la puerta lentamente.</p>`
+  }
+];
+
+let activeStory = null;
+
+function openStory(index) {
+  const m = members[index];
+  activeStory = index;
+  document.getElementById('storyName').textContent = m.name;
+  document.getElementById('storyEpithet').textContent = m.epithet;
+  document.getElementById('storyPortrait').innerHTML = m.portrait
+    ? `<img src="${m.portrait}" alt="${m.name}" style="width:100%;height:100%;object-fit:cover;display:block;">`
+    : '';
+  document.getElementById('storyText').innerHTML = `
+    <div class="story-excerpt">${m.excerpt}</div>
+    <div class="story-more" id="storyMore">${m.more}</div>
+    <button class="read-more-btn" id="readMoreBtn" onclick="toggleMore()">Leer mas</button>
+  `;
+  const panel = document.getElementById('storyPanel');
+  panel.classList.add('open');
+  setTimeout(() => panel.scrollIntoView({ behavior: 'smooth', block: 'start' }), 50);
+}
+
+function closeStory() {
+  document.getElementById('storyPanel').classList.remove('open');
+  activeStory = null;
+}
+
+function toggleMore() {
+  const more = document.getElementById('storyMore');
+  const btn  = document.getElementById('readMoreBtn');
+  const open = more.classList.toggle('visible');
+  btn.textContent = open ? 'Leer menos' : 'Leer mas';
+}
+</script>
+</body>
+</html>
